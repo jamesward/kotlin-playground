@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.7.10"
+    application
+    kotlin("jvm") version "1.8.0"
 }
 
 java {
@@ -13,6 +14,5 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 }
