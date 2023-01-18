@@ -1,12 +1,12 @@
 import kotlin.math.ceil
 
+// Contains improvements from: https://twitter.com/mrudolph22/status/1615627795803287552
 fun main() {
 
     fun percentageToProgress(double: Double): String {
         val percentage = double.coerceIn(0.0, 1.0)
         val fill = ceil(percentage * 10).toInt()
-        return (0 until fill).joinToString("") { "●" } +
-               (fill until 10).joinToString("") { "◯" }
+        return "●".repeat(fill) + "◯".repeat(10 - fill)
     }
 
     (0..100 step 5).forEach {
